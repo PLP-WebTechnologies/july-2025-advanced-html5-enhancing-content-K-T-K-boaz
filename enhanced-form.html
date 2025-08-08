@@ -1,64 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Enhanced HTML5 Page with Forms</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Content & Forms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header, section, footer {
+            margin-bottom: 40px;
+        }
+        table, th, td {
+            border: 1px solid #444;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            display: block;
+            margin-top: 8px;
+            margin-bottom: 16px;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>Exploring HTML5: Content & Forms</h1>
-    <p>A demonstration of semantic content, media, and validated forms.</p>
-  </header>
+<header>
+    <h1>Welcome to My HTML5 Showcase</h1>
+    <p>This webpage demonstrates advanced HTML5 content elements and a fully functional, accessible HTML5 form.</p>
+</header>
 
-  <main>
+<section>
+    <h2>1. Organized Content with Lists</h2>
+    <h3>Ordered List – Daily Routine</h3>
+    <ol>
+        <li>Wake up at 6:00 AM</li>
+        <li>Exercise for 30 minutes</li>
+        <li>Take a shower</li>
+        <li>Breakfast and coffee</li>
+        <li>Start work by 8:00 AM</li>
+    </ol>
 
-    <!-- Section: Lists -->
-    <section>
-      <h2>Popular Web Technologies</h2>
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>PHP</li>
-      </ul>
-    </section>
+    <h3>Unordered List – Hobbies</h3>
+    <ul>
+        <li>Reading novels</li>
+        <li>Photography</li>
+        <li>Listening to podcasts</li>
+        <li>Traveling</li>
+    </ul>
+</section>
 
-    <!-- Section: Table -->
-    <section>
-      <h2>Course Schedule</h2>
-      <table border="1" cellpadding="8" cellspacing="0">
+<section>
+    <h2>2. Data Display with a Table</h2>
+    <table>
+        <caption>Monthly Expenses (KES)</caption>
         <thead>
-          <tr>
-            <th>Week</th>
-            <th>Topic</th>
-            <th>Resources</th>
-          </tr>
+            <tr>
+                <th>Category</th>
+                <th>January</th>
+                <th>February</th>
+                <th>March</th>
+            </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>HTML Basics</td>
-            <td>Slides, Video</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Semantic HTML</td>
-            <td>Reading, Practice</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Forms & Validation</td>
-            <td>Demo Code</td>
-          </tr>
+            <tr>
+                <td>Rent</td>
+                <td>15,000</td>
+                <td>15,000</td>
+                <td>15,000</td>
+            </tr>
+            <tr>
+                <td>Groceries</td>
+                <td>6,500</td>
+                <td>7,000</td>
+                <td>6,800</td>
+            </tr>
+            <tr>
+                <td>Transport</td>
+                <td>3,200</td>
+                <td>3,000</td>
+                <td>3,100</td>
+            </tr>
         </tbody>
-      </table>
-    </section>
+    </table>
+</section>
 
-    <!-- Section: Media -->
-    <section>
-      <h2>HTML5 Media Examples</h2>
+<section>
+    <h2>3. Media Embeds</h2>
+    <h3>Image</h3>
+    <img src="https://via.placeholder.com/600x300.png?text=Sample+Image" alt="Sample Placeholder Image" width="100%">
 
-      <h
+    <h3>Audio</h3>
+    <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h3>Video</h3>
+    <video width="100%" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+<section>
+    <h2>4. User Feedback Form</h2>
+    <form action="#" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required minlength="3">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="e.g. name@example.com" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g. 0712345678" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Feedback</legend>
+
+            <label for="experience">How was your experience?</label>
+            <select id="experience" name="experience" required>
+                <option value="">--Please choose an option--</option>
+                <option value="excellent">Excellent</option>
+                <option value="good">Good</option>
+                <option value="fair">Fair</option>
+                <option value="poor">Poor</option>
+            </select>
+
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="5" placeholder="Write your feedback here..."></textarea>
+
+            <label>
+                <input type="checkbox" name="subscribe" checked>
+                Subscribe to newsletter
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Terms and Confirmation</legend>
+
+            <label>
+                <input type="radio" name="agreement" value="agree" required>
+                I agree to the terms and conditions.
+            </label>
+
+            <input type="submit" value="Submit Feedback">
+            <input type="reset" value="Reset Form">
+        </fieldset>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Boaz Khuteka | HTML5 Assignment</p>
+</footer>
+
+</body>
+</html>
